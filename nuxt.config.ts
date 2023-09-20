@@ -1,8 +1,25 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    apiKey:process.env.API_KEY,
+    public: {
+      baseUrl: process.env.API_BASE_URL,
+    }
+  },
+  ssr: true,
+  
   css: [
     "~/assets/css/main.scss",
   ],
+
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image"
+  ],
+
+  image: {
+    quality: 80,
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -36,7 +53,6 @@ export default defineNuxtConfig({
               },
           ],
       }
-      
   },
 
   googleFonts: {

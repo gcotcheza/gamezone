@@ -1,12 +1,16 @@
 <template>
   <div>
-    <header class="flex justify-between">
-      <nav class="bg-white text-lg px-6 py-6">
-        <div class="container mx-auto flex items-center px-6">
+    <header
+      class="flex justify-between sticky top-0 z-50 items-center space-x-1 border-b bg-white p-4 shadow-md"
+    >
+      <nav class="sticky top-0 z-50 items-center bg-white text-lg px-6 py-6">
+        <div class="container mx-auto flex w-full items-center px-6">
           <div><NuxtLink to="/">Gamezone</NuxtLink></div>
           <div>
-            <ul class="flex space-x-12 pl-12 text-gray-600">
-              <li><NuxtLink to="/">Home</NuxtLink></li>
+            <ul class="flex space-x-20 pl-12 text-gray-600">
+              <li>
+                <NuxtLink to="/">Home</NuxtLink>
+              </li>
               <li><NuxtLink to="/games">Games</NuxtLink></li>
               <li><NuxtLink to="/developers">Developers</NuxtLink></li>
               <li><NuxtLink to="/contact">Contact</NuxtLink></li>
@@ -14,14 +18,14 @@
           </div>
         </div>
       </nav>
-      <div class="flex justify-between" >
+      <div class="flex justify-between">
         <form class="flex items-center">
           <label for="simple-search" class="sr-only">Search</label>
           <div class="relative w-full">
             <input
               type="text"
-              id="simple-search"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              id="game-search"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-400 block w-full pl-4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search game..."
               required
             />
