@@ -99,7 +99,7 @@ export default {
 
 const { id } = useRoute().params;
 
-const { data } = await useFetch(
+const { data, error } = await useFetch(
   `https://api.rawg.io/api/games/${id}/screenshots?key=d785dde9bfbe45fb85d5d39338328eb7`
 );
 

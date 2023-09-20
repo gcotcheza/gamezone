@@ -1,14 +1,20 @@
 // import { defineNuxtPlugin } from '@nuxtjs/composition-api';
 
-    // export default defineNuxtPlugin(async () => {
+    // export default defineNuxtPlugin(async () => {https://api.rawg.io/api/games
 
     // const response = await $fetch("https://api.rawg.io/api/games?key=d785dde9bfbe45fb85d5d39338328eb7")
     // const data = await response.json();
     // return data
 // });
 
-export default defineEventHandler( async (event) => {
+export default defineEventHandler(async (event) => {
 
+ const { data: response } = await $fetch(
+    'https://api.rawg.io/api/games?key=d785dde9bfbe45fb85d5d39338328eb7'
+ )
+  return {
+    response
+  }
     // handle query param
     // const { name } = getQuery(event)
 
@@ -24,5 +30,5 @@ export default defineEventHandler( async (event) => {
 //     }
 //     const { data } = await response.json();
 // console.log(data);
-//     return games
+
 })
